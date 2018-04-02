@@ -1,0 +1,86 @@
+<div class="hero">
+	<div class="container">
+		<div id="banner_1">
+			<h1 class="titulo white"><span>Pavos</span> Gourmet</h1>
+			<p class="white hidden-xs">Lorem ipsum dolor amet blue bottle affogato direct trade stumptown pork belly fam, scenester keffiyeh church-key.</p>
+
+			<%= link_to new_contact_path do %>
+			<button class="button button_primary">Más información</button>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+<div id="carrousel">
+	<div class="owl-carousel">
+		
+		<!-- au -->
+		<div>
+			<ul class="row">
+				<li class="col-md-6" id="roll_izq">
+					<h3 class="titulo"> <span>Menús</span> Saludables</h3>
+					<%= image_tag "bolitas.svg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque quia modi, placeat officiis blanditiis sunt nihil nostrum non quisquam! Doloribus dicta id illum. Dicta aliquam quo perferendis repellat, aspernatur!</p>
+					<button class="button button_primary">Más información</button>
+				</li>
+				<li class="col-md-6" id="roll_der">
+					<%= image_tag "banner_home" %>
+				</li>
+			</ul>
+		</div>
+		<!-- au -->
+
+		<div>
+			<ul class="row">
+				<li class="col-md-6" id="roll_izq">
+					<h3 class="titulo"> <span>Menús</span> Saludables</h3>
+					<%= image_tag "bolitas.svg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque quia modi, placeat officiis blanditiis sunt nihil nostrum non quisquam! Doloribus dicta id illum. Dicta aliquam quo perferendis repellat, aspernatur!</p>
+					<button class="button button_primary">Más información</button>
+				</li>
+				<li class="col-md-6" id="roll_der">
+					<%= image_tag "banner_home" %>
+				</li>
+			</ul>
+		</div>
+		<!-- au -->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	$(".owl-carousel").owlCarousel(
+	{
+    margin:10,
+    loop:true,
+    autoWidth:true,
+    items:1,
+		autoPlay:true,
+		autoplayTimeout:1000,
+		responsiveClass:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+	});
+</script>

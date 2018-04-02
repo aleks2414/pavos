@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= csrf_meta_tags %>
+	<%= display_meta_tags %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<script src="https://use.fontawesome.com/7dee056668.js"></script>
+</head>
+
+<body>
+
+<% if alert %>
+	<p class="alert"><%= alert %></p>
+<% elsif notice %>
+	<p class="notice"><%= notice %></p>
+<% end %>
+
+<div id="logo">
+	<%= link_to root_path do %>
+	<%= image_tag "logo.svg" %>
+	<% end %>
+</div>
+
+
+<div id="navin">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-center">
+        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Productos Saludables</a></li>
+        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Eventos</a></li>
+        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Nosotros</a></li>
+        <li class="<%= 'activo' if current_page?(new_contact_path) %>"><a href="<%=new_contact_path %>">Contacto</a></li>
+        
+        <% if user_signed_in? %>
+        <li class="mini"> <a href="<%= destroy_user_session_path %>" data-method='delete'>
+        Cerrar Sesión
+      </a></li>
+        <% else %>
+        <li class="mini"><a href="<%= new_user_session_path %>"> Iniciar Sesión </a></li>
+        <% end %>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+
+<div id="content">
+	<%= yield %>
+</div>
+</body>
+</html>
