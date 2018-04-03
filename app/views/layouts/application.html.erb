@@ -11,58 +11,151 @@
 
 <body>
 
-<% if alert %>
+	<% if alert %>
 	<p class="alert"><%= alert %></p>
-<% elsif notice %>
+	<% elsif notice %>
 	<p class="notice"><%= notice %></p>
-<% end %>
-
-<div id="logo">
-	<%= link_to root_path do %>
-	<%= image_tag "logo.svg" %>
 	<% end %>
-</div>
+
+	<div id="logo">
+		<%= link_to root_path do %>
+		<%= image_tag "logo.svg" %>
+		<% end %>
+	</div>
 
 
-<div id="navin">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+	<div id="navin">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-center">
-        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Productos Saludables</a></li>
-        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Eventos</a></li>
-        <li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Nosotros</a></li>
-        <li class="<%= 'activo' if current_page?(new_contact_path) %>"><a href="<%=new_contact_path %>">Contacto</a></li>
-        
-        <% if user_signed_in? %>
-        <li class="mini"> <a href="<%= destroy_user_session_path %>" data-method='delete'>
-        Cerrar Sesión
-      </a></li>
-        <% else %>
-        <li class="mini"><a href="<%= new_user_session_path %>"> Iniciar Sesión </a></li>
-        <% end %>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-center">
+						<li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Productos Saludables</a></li>
+						<li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Eventos</a></li>
+						<li class="<%= 'activo' if current_page?(root_path) %>"><a href="<%=root_path %>">Nosotros</a></li>
+						<li class="<%= 'activo' if current_page?(new_contact_path) %>"><a href="<%=new_contact_path %>">Contacto</a></li>
 
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</div>
+						<% if user_signed_in? %>
+						<li class="mini"> <a href="<%= destroy_user_session_path %>" data-method='delete'>
+							Cerrar Sesión
+						</a></li>
+						<% else %>
+						<li class="mini"><a href="<%= new_user_session_path %>"> Iniciar Sesión </a></li>
+						<% end %>
+
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
 
 
-<div id="content">
-	<%= yield %>
-</div>
+	<div id="content">
+		<%= yield %>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div id="footer_iz">
+						<ul>
+							<li>
+								<%= link_to root_path do %>
+								<%= image_tag "logo.svg" %>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to root_path do %>
+								<span class="fa fa-facebook"></span>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to root_path do %>
+								<span class="fa fa-instagram"></span>
+								<% end %>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+
+				</div>
+				<div class="col-md-4">
+					<div id="footer_der">
+						<ul>
+							<li>
+								<p class="white rigth"><span class="fa fa-map-marker white"></span> Av. Del Sol 45, Col. Juarez, CDMX</p>
+							</li>
+							<li>
+								<p class="white rigth"><span class="fa fa-phone white"></span> 55 (4598) (1254) y 55 (1190)(3476)</p>
+							</li>
+							<li>
+								<p class="white rigth"><span class="fa fa-envelope-open white"></span> contacto@pavosgourmet.com</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contact">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-7 hidden-xs">
+				<div id="formario">
+				<h2>Contáctanos</h2>
+				<div class="imgen">
+				<%= image_tag "bolitas.svg" %>
+				</div>
+					<%= form_for @contact do |f| %>
+					<div class="field">
+						<%= f.label :nombre %><br>
+						<%= f.text_field :name, required:true %>
+					</div>
+
+
+					<div class="field">
+						<%= f.label :email %><br>
+						<%= f.email_field :email, required:true %>
+					</div>
+
+
+					<%= f.text_field :donde, :value => "#{params[:controller]} - #{request.original_url}", class: "hidden" %>
+
+					<div class="field">
+						<%= f.label :comentarios %><br>
+						<%= f.text_area :comments %>
+					</div>
+
+					<div class="hidden">
+						<%= f.label :nickname %><br>
+						<%= f.text_field :nickname, hint: 'Esto se queda en blanco' %>
+					</div>
+
+					<br>
+					<div class="but">
+						<%= f.submit "Enviar", class:"button button_primary button_center"%>
+					</div>
+					<br>
+					<% end %>						
+
+				</div>
+				<p class="white center">Copyright © 2018. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

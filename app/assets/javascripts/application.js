@@ -13,6 +13,7 @@
 //= require jquery
 // require jquery-ui
 //  require jquery_ujs
+//= require owl.carousel
 //= require bootstrap-sprockets
 // require moment
 // require fullcalendar
@@ -23,5 +24,5 @@
 // require bootstrap
 //= require ckeditor/init
 // require cocoon
-//= require owl.carousel
+
 //= require_tree .
