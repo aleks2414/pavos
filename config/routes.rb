@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  
+  get '/nosotros' => 'pages#nosotros'
   devise_for :users
   root 'welcome#index'
 
