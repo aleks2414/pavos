@@ -1,0 +1,50 @@
+<div class="hero" id="productos2">
+  <div class="container">
+    <div id="banner_1">
+      <h1 class="titulo white"><span>Productos</span> Saludables</h1>
+    </div>
+  </div>
+</div>
+
+
+<div id="pavos">
+  <div class="container">
+    <h1 class="titulo white">100% mexicano... <span>100% Saludable</span>?</h1>
+    <%= image_tag "bolitas_W.svg"%>
+    <p class="white">Craft beer blue bottle viral readymade, hella brooklyn austin. Tbh truffaut listicle put a bird on it, street art plaid lyft marfa schlitz. Ugh vape schlitz hell of, disrupt try-hard gentrify polaroid direct trade chambray. Lo-fi man braid chartreuse celiac, hella synth scenester pork belly. </p>
+
+<ul>
+	<li class="<%= 'activo3' if current_page?(productos_saludables_menus_path) %>">
+		<%= link_to "Menus Saludables", productos_saludables_menus_path %>
+	</li>
+
+	<li class="<%= 'activo3' if current_page?(productos_saludables_de_temporada_path) %>">
+		<%= link_to "De temporada", productos_saludables_de_temporada_path %>
+	</li>
+
+	<li class="<%= 'activo3' if current_page?(productos_saludables_postres_veganos_path) %>">
+		<%= link_to "Postres Veganos", productos_saludables_postres_veganos_path %>
+	</li>
+
+	<li class="<%= 'activo3' if current_page?(productos_saludables_todos_los_dias_path) %>">
+		<%= link_to "De todos los días", productos_saludables_todos_los_dias_path %>
+	</li>
+</ul>
+
+  </div>
+</div>
+
+<div class="container">
+<div id="productos_show">
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<div id="productitis">
+				<%= image_tag "image30.jpg" %>
+				<h3>Tarta de Fresas de temporada</h3>
+				<p>La descripció de los platillos es la mejor parte del día.. así que aprovechen el descuento que tenemos para sutedes amigos mios hijos del rock and rool</p>
+				<button class="button button_primary">Más información</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

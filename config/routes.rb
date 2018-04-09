@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   
   resources :events
   get '/nosotros' => 'pages#nosotros'
+  get '/productos_saludables/menus' => 'pages#menus'
+  get '/productos_saludables/de_temporada' => 'pages#temporada'
+  get '/productos_saludables/postres_veganos' => 'pages#postres'
+  get '/productos_saludables/todos_los_dias' => 'pages#diario'
   devise_for :users
   root 'welcome#index'
 

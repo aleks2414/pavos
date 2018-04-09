@@ -213,6 +213,16 @@ margin-top: 20px;
   }
 }
 
+#productos2 {
+  background:
+    linear-gradient(to right, rgba(93, 93, 93, 0.5), rgba(0, 0, 0, 0.6)),    url(asset-path("cover_6.png"));
+  height: 60vh;
+  h1 {
+    margin-top: 10%;
+    font-size: 35px;
+  }
+}
+
 
 
 #banner_1 {
@@ -406,8 +416,49 @@ select {
   }
 }
 
+#pavos {
+  li {
+    display: inline;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border: solid 1px white;
+    a {
+      color: white;
+    }
+  }
+    .activo3{
+      border: solid 1px $primary;
+      a {
+        color: $primary;
+      }
+    }
+}
 
+#productos_show {
+  margin-top: 50px;
+  text-align: center;
+}
 
+#productitis {
+  margin-bottom: 50px;
+  padding: 5%;
+  border: solid 1px $secondary;
+  height: 470px;
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 370px;
+  }
+  h3 {
+    /* Tarta de Fresas: */
+font-family: Raleway-BoldItalic;
+font-size: 19px;
+color: #1E1D1D;
+  }
+  p {
+    font-size: .8em;
+  }
+}
 /*Media*/
 
 @media (max-width: 800px)
@@ -432,6 +483,14 @@ background-attachment: unset;
 
 #footer {
   margin-top: 170px;
+}
+
+#pavos {
+  li {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 }
