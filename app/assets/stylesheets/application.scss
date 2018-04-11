@@ -156,6 +156,16 @@ margin-top: 20px;
   }
 }
 
+.titulo2 {
+  margin-top: 10px;
+  font-family: 'Courgette', cursive;
+  font-size: 1.5em !important;
+  span {
+    color: $primary;
+    font-family: 'Courgette', cursive;
+  }
+}
+
 .right {
   text-align: right;
 }
@@ -252,7 +262,7 @@ h2 {
   text-align: center;
 }
 
-input[type="date"],input[type="name"], input[type="email"], input[type="textbox"], input[type="number"], input[type="tel"], input[type="text"], input[type="password"], textarea {
+input[type="date"],input[type="name"], input[type="email"], input[type="textbox"], input[type="number"], input[type="tel"], input[type="text"], input[type="password"], textarea, select {
   width: 100%;
   height: 25px;
   border:none;
@@ -444,7 +454,7 @@ select {
   margin-bottom: 50px;
   padding: 5%;
   border: solid 1px $secondary;
-  height: 470px;
+  height: 440px;
   img {
     width: 100%;
     margin-bottom: 10px;
@@ -460,6 +470,26 @@ color: #1E1D1D;
     font-size: .8em;
   }
 }
+
+.img {
+  img {
+    width: 100%;
+  }
+}
+
+#infor {
+    hr {
+  border-color: $primary;
+  border-width: 3px;
+  max-width: 160px;
+  margin-left: 0;
+  }
+}
+
+strong {
+  font-weight: 900;
+}
+
 /*Media*/
 
 @media (max-width: 800px)

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :products
   resources :events
   get '/nosotros' => 'pages#nosotros'
   get '/productos_saludables/menus' => 'pages#menus'

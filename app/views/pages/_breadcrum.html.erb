@@ -37,14 +37,18 @@
 <div class="container">
 <div id="productos_show">
 	<div class="row">
+<% @products.each do |product| %>
 		<div class="col-md-3 col-sm-6">
 			<div id="productitis">
-				<%= image_tag "image30.jpg" %>
-				<h3>Tarta de Fresas de temporada</h3>
-				<p>La descripció de los platillos es la mejor parte del día.. así que aprovechen el descuento que tenemos para sutedes amigos mios hijos del rock and rool</p>
+				<%= image_tag product.foto.heavy %>
+				<h3><%= product.nombre %></h3>
+				<p><%= product.descripcion%></p>
+				<%= link_to product do %>
 				<button class="button button_primary button_block">Más información</button>
+				<% end %>
 			</div>
 		</div>
+<% end %>
 	</div>
 </div>
 </div>

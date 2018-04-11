@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disponible: false
+  nombre: MyString
+  descripcion: MyText
+  categoria: MyString
+  precio: MyString
+  tiempo: MyString
+  foto: MyString
+  foto2: MyString
+  foto3: MyString
+  user: one
+  beneficios: MyText
+  ingredientes: MyText
+
+two:
+  disponible: false
+  nombre: MyString
+  descripcion: MyText
+  categoria: MyString
+  precio: MyString
+  tiempo: MyString
+  foto: MyString
+  foto2: MyString
+  foto3: MyString
+  user: two
+  beneficios: MyText
+  ingredientes: MyText

@@ -1,0 +1,95 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="formario">
+
+  <div class="field">
+    <%= form.label :disponible %>
+    <%= form.check_box :disponible, id: :product_disponible %>
+  </div>
+
+</div>
+
+<div id="formario">
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :product_nombre, required:true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion, id: :product_descripcion, required:true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.select :categoria, [["menús saludables"], ["de temporada"], ["postres veganos"], ["de todos los días"]], required: true%>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.text_field :precio, id: :product_precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiempo %>
+    <%= form.text_field :tiempo, id: :product_tiempo, required:true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beneficios %>
+    <%= form.text_area :beneficios, id: :product_beneficios %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingredientes %>
+    <%= form.text_area :ingredientes, id: :product_ingredientes %>
+  </div>
+
+</div>
+
+<div id="formario">
+
+  <div class="field">
+    <%= form.label :foto_principal %><br>
+    <%= @product.foto if @product.foto %>
+    <br><br>
+    <%= form.file_field :foto, required:true %>
+    <%= form.hidden_field :foto_cache %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto2 %><br>
+    <%= @product.foto2 if @product.foto2 %>
+    <br><br>
+    <%= form.file_field :foto2 %>
+    <%= form.hidden_field :foto2_cache %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto3 %><br>
+    <%= @product.foto3 if @product.foto3 %>
+    <br><br>
+    <%= form.file_field :foto3 %>
+    <%= form.hidden_field :foto3_cache %>
+  </div>
+
+</div>
+
+
+
+  <div class="actions">
+    <%= form.submit class: "button button_primary button_center" %>
+  </div>
+<% end %>

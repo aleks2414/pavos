@@ -51,8 +51,16 @@
     <%= form.text_field :link, id: :event_link %>
   </div>
 
+  <div class="field">
+    <%= form.label :imagen %><br>
+    <%= @event.image if @event.image %>
+    <br><br>
+    <%= form.file_field :image, required:true %>
+    <%= form.hidden_field :image_cache %>
+  </div>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "button button_primary button_center" %>
   </div>
 <% end %>
