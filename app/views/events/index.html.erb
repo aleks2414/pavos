@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-md-4">
         <div id="evento_izq">
-          <%= image_tag "evento1.png"%>
+          <%= image_tag event.image.heavy%>
         </div>
       </div>
       <div class="col-md-8">
@@ -36,7 +36,7 @@
           <h5><span class="fa fa-clock"></span>Hora: <%= event.hora %></h5>
           <h5><span class="fa fa-link"></span> <%= event.link %></h5>
           <%= link_to events_path(:anchor => "footer") do %>
-          <button class="button button_primary"> Más información</button>
+          <button class="button button_primary">Solicitar más información</button>
           <% end %>
         </div>
       </div>
