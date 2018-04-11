@@ -1,0 +1,10 @@
+<section>
+	<nav>
+		<ol class="cd-breadcrumb custom-separator">
+			<li class="<%= 'current' if current_page?(products_path) %>"><a href="<%= products_path %>">Productos</a></li>
+			<li class="<%= 'current' if current_page?(new_product_path) %>"><a href="<%= new_product_path %>">Nuevo Producto</a></li>
+			<li class="<%= 'current' if current_page?(mis_eventos_path) %>"><a href="<%= mis_eventos_path %>">Eventos</a></li>
+			<li class="<%= 'current' if current_page?(new_event_path) %>"><a href="<%= new_event_path%>">Nuevo Evento</a></li>
+		</ol>
+	</nav>
+</section>

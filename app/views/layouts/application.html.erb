@@ -111,15 +111,15 @@
 		</div>
 	</div>
 
-<% unless current_page?(new_contact_path) %>
+	<% unless current_page?(new_contact_path) %>
 	<div id="contact">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-7 hidden-xs">
 				<div id="formario">
-				<h2>Contáctanos</h2>
-				<div class="imgen">
-				<%= image_tag "bolitas.svg" %>
-				</div>
+					<h2>Contáctanos</h2>
+					<div class="imgen">
+						<%= image_tag "bolitas.svg" %>
+					</div>
 					<%= form_for @contact do |f| %>
 					<div class="field">
 						<%= f.label :nombre %><br>
@@ -157,7 +157,7 @@
 			</div>
 		</div>
 	</div>
-<% end %>
+	<% end %>
 
 </body>
 </html>

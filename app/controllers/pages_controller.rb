@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: [:eventos]
   def nosotros
   end
 
@@ -16,5 +17,9 @@ class PagesController < ApplicationController
 
   def diario
   	@products = Product.where(:disponible => true, :categoria => "de todos los días")
+  end
+
+  def eventos
+    @events = Event.all
   end
 end

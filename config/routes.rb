@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :products
   resources :events
   get '/nosotros' => 'pages#nosotros'
+  get '/mis_eventos' => 'pages#eventos'
   get '/productos_saludables/menus' => 'pages#menus'
   get '/productos_saludables/de_temporada' => 'pages#temporada'
   get '/productos_saludables/postres_veganos' => 'pages#postres'

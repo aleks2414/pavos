@@ -1,15 +1,16 @@
+<%= render 'welcome/bread' %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div id="formario">
+      
 
-<h2>Editar Evento <%=@event.nombre %></h2>
+<h2 class="center">Editar Evento <%=@event.nombre %></h2>
 
 <%= render 'form', event: @event %>
 
 <%= link_to 'Ver Evento', @event %>
 
-</div>
 </div>
 </div>
 </div>
