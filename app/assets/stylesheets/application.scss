@@ -288,6 +288,7 @@ select {
 #logo {
   text-align: center;
   background-color: $secondary;
+  padding-top: 30px;
 }
 
 #pavos {
@@ -339,7 +340,7 @@ select {
     display: inline;
     margin-right: 22px;
   }
-  span {
+  a {
     color: white;
     font-size: 20px;
   }
