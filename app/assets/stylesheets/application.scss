@@ -316,6 +316,9 @@ select {
 
   #cuatro {
     height: 150px;
+    img {
+      width: 65px;
+    }
   }
 }
 
@@ -456,7 +459,7 @@ select {
   margin-bottom: 50px;
   padding: 5%;
   border: solid 1px $secondary;
-  height: 340px;
+  height: 370px;
   img {
     width: 100%;
     margin-bottom: 10px;
@@ -493,7 +496,16 @@ strong {
 }
 
 
-
+#tablon {
+  margin: 80px 0;
+  h1 {
+    font-weight: 900;
+    font-size: 1.5em;
+  }
+  th {
+    font-weight: 900;
+  }
+}
 
 
 /*Media*/
