@@ -19,6 +19,14 @@ class PagesController < ApplicationController
   	@products = Product.where(:disponible => true, :categoria => "de todos los días")
   end
 
+  def gourmet
+    @products = Product.where(:disponible => true, :categoria => "casa gourmet")
+  end
+
+  def bebidas
+    @products = Product.where(:disponible => true, :categoria => "bebidas")
+  end
+
   def eventos
     @events = Event.all
   end

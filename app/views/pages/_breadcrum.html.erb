@@ -14,6 +14,11 @@
     <p class="white">Queremos compartir contigo los diferente y únicos sabores que te podemos ofrecer. Ya sea para una comida, tu almuerzo saludable o tan sólo un antojito. Atrévete a consentir tu paladar con nuestros productos 100% de pavo y 100% mexicanos.</p>
 
 <ul>
+
+	<li class="<%= 'activo3' if current_page?(productos_saludables_casa_gourmet_path) %>">
+		<%= link_to "Casa Gourmet", productos_saludables_casa_gourmet_path %>
+	</li>
+
 	<li class="<%= 'activo3' if current_page?(productos_saludables_menus_path) %>">
 		<%= link_to "Menus Saludables", productos_saludables_menus_path %>
 	</li>
@@ -28,6 +33,11 @@
 
 	<li class="<%= 'activo3' if current_page?(productos_saludables_todos_los_dias_path) %>">
 		<%= link_to "De todos los días", productos_saludables_todos_los_dias_path %>
+	</li>
+
+
+	<li class="<%= 'activo3' if current_page?(productos_saludables_bebidas_path) %>">
+		<%= link_to "Bebidas", productos_saludables_bebidas_path %>
 	</li>
 </ul>
 
