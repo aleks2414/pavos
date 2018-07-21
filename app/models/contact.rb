@@ -11,7 +11,7 @@ def headers
 	{
 	:subject => "Nueva Confirmación",
 	:to => "alex@idearialab.com",
-	# :cc => "alejandroromo14@gmail.com",
+	:cc => "alejandroromo14@gmail.com",
 	:from => %("#{name}" <#{email}>)
 	}
 	end
